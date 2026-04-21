@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Health Monitor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Smart Health Monitor</h1>
+
+<div class="container">
+
+    <h2>Add Record</h2>
+    <form id="recordForm">
+        <input type="text" placeholder="Name" id="name" required>
+        <input type="number" placeholder="Age" id="age" required>
+
+        <input type="number" placeholder="Temperature" id="temp" required>
+        <input type="number" placeholder="Heart Rate" id="hr">
+        <input type="text" placeholder="BP (120/80)" id="bp">
+
+        <input type="number" placeholder="Water pH" id="ph" required>
+        <input type="number" placeholder="TDS" id="tds" required>
+        <input type="number" placeholder="Turbidity" id="turbidity" required>
+
+        <label>
+            Contamination:
+            <input type="checkbox" id="contamination">
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Alerts</h2>
+    <button onclick="getAlerts()">Check Alerts</button>
+    <ul id="alertsList"></ul>
+
+    <h2>All Records</h2>
+    <button onclick="loadRecords()">Load Records</button>
+    <ul id="recordsList"></ul>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
